@@ -21,6 +21,6 @@ public class Player : MonoBehaviour
         float horizTurnAmount = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
         transform.Translate(horizontalMoveAmount, verticalMoveAmount, 0);
         // 01.26.2022 - Figure out hot to make sprite fact the direction it's moving in
-        // transform.Rotate(0, horizTurnAmount, 0);
+        // transform.Rotate(0, 0 , horizTurnAmount);
     }
 }
