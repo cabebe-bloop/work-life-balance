@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]float moveSpeed = 0.5f;
-    [SerializeField]float turnSpeed = 0.5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]float moveSpeed = 5f;
+    public Rigidbody2D rb;
+    Vector2 movement; 
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
     {
-        float horizontalMoveAmount = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        float verticalMoveAmount = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
 
-        float horizTurnAmount = Input.GetAxis("Horizontal") * turnSpeed * Time.deltaTime;
-        transform.Translate(horizontalMoveAmount, verticalMoveAmount, 0);
-        // 01.26.2022 - Figure out hot to make sprite fact the direction it's moving in
-        // transform.Rotate(0, 0 , horizTurnAmount);
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.magnitude);
     }
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
 }
