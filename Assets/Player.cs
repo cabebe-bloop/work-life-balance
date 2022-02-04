@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public float currentHealth;
     public PhysHealthBar physHealthBar;
 
+    public Collisions interaction;
+
     void Start() {
         currentHealth = maxHealth;
         physHealthBar.SetMaxHealth(maxHealth);
@@ -20,30 +22,47 @@ public class Player : MonoBehaviour
 
     void Update()
     {   
-        
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.magnitude);
+
+        StartCoroutine(DecreaseHealth());
+
+        if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
+        {    
+            // seems to be running multiple times (maybe for the entire duration the condition is true?)
+            // how can I say "only run this once"
+            AddPhysHealth(3);
+        }
     }
     void FixedUpdate()
     {
-        StartCoroutine(DecreaseHealth());
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    // Figure out the while loop condition and why it runs the coroutine so often
+    // Find a solution (maybe check Unity order of execution?) to place DecreaseHealth in an area where the while loop actually
+    // waits the 3 seconds.
     IEnumerator DecreaseHealth()
     {
+        yield return new WaitForSecondsRealtime(3);
         while (currentHealth > 0)
         {
-            Debug.Log("START:" + Time.time);
-            currentHealth -= 0.005f;
+            // Debug.Log("START:" + Time.time);
+            yield return new WaitForSeconds(3);
+            currentHealth -= 0.01f;
             physHealthBar.SetHealth(currentHealth);
-            yield return new WaitForSeconds(5);
-            Debug.Log("STOP:" + Time.time);
+            // Debug.Log("STOP:" + Time.time);
         }
+    }
+
+    public void AddPhysHealth (float health) 
+    {
+        currentHealth += health;
+        physHealthBar.SetHealth(currentHealth);
     }
 
 }

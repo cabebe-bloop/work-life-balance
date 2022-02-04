@@ -11,6 +11,8 @@ public class Collisions : MonoBehaviour
     [SerializeField] Color32 plantDefault = new Color32 (1, 1, 1, 1);
     public GameObject target;
 
+    public bool plantBeingWatered = false;
+
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -26,24 +28,31 @@ public class Collisions : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {   if (!target)
             {
+                // spriteRenderer.color = beingWatered;
                 return;
             }
 
             if (target.tag == "Plant") 
             {
-                Debug.Log("I'm watering Plant!");
-                StartCoroutine(waterPlant());
+                waterPlant();
             }
         }
     }
 
-    IEnumerator waterPlant () 
+    public void waterPlant() 
     {
+        Debug.Log("I'm watering Plant!");
+        StartCoroutine(plantColorFlash());
+    }
+    IEnumerator plantColorFlash () 
+    {
+        plantBeingWatered = true;
         for (int i = 0; i < 5; i++) {
             targetSpriteRenderer.color = beingWatered;
             yield return new WaitForSeconds(.13f);
             targetSpriteRenderer.color = plantDefault;
             yield return new WaitForSeconds(.13f);
+            plantBeingWatered = false;
         }
     }
 }

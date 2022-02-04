@@ -17,4 +17,10 @@ public class PhysHealthBar : MonoBehaviour
         slider.maxValue = health;
         slider.value = health;
     }
+
+    // public void AddPhysHealth (float health) 
+    // {
+    //     slider.value += health;
+    //     SetHealth(slider.value);
+    // }
 }

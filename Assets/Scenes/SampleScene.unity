@@ -3240,6 +3240,10 @@ MonoBehaviour:
   moveSpeed: 10
   rb: {fileID: 1113731757}
   animator: {fileID: 1113731756}
+  maxHealth: 50
+  currentHealth: 50
+  physHealthBar: {fileID: 1238560981}
+  interaction: {fileID: 1113731759}
 --- !u!212 &1113731754
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3392,6 +3396,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   target: {fileID: 0}
+  plantBeingWatered: 0
 --- !u!1 &1157986409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3540,7 @@ GameObject:
   - component: {fileID: 1238560980}
   - component: {fileID: 1238560981}
   m_Layer: 5
-  m_Name: Health Bar
+  m_Name: Phys Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3607,9 +3612,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: 40.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3625,7 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43bd9eca8d514991a9878ef9995d5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 0}
+  slider: {fileID: 1238560980}
 --- !u!1 &1262506386
 GameObject:
   m_ObjectHideFlags: 0
