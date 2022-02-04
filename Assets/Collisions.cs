@@ -32,9 +32,29 @@ public class Collisions : MonoBehaviour
             if (target.tag == "Plant") 
             {
                 Debug.Log("I'm watering Plant!");
-                targetSpriteRenderer.color = beingWatered;
+                StartCoroutine(waterPlant());
+                // increase emotional health bar
             }
         }
     }
 
+    IEnumerator waterPlant () 
+    {
+        // learn how to write a for loop in C# for this
+        targetSpriteRenderer.color = beingWatered;
+        yield return new WaitForSeconds(.15f);
+        targetSpriteRenderer.color = plantDefault;
+        yield return new WaitForSeconds(.15f);
+        targetSpriteRenderer.color = beingWatered;
+        yield return new WaitForSeconds(.15f);
+        targetSpriteRenderer.color = plantDefault;
+        yield return new WaitForSeconds(.15f);
+        targetSpriteRenderer.color = beingWatered;
+        yield return new WaitForSeconds(.15f);
+        targetSpriteRenderer.color = plantDefault;
+        yield return new WaitForSeconds(.15f);
+        targetSpriteRenderer.color = beingWatered;
+        yield return new WaitForSeconds(.15f);
+        targetSpriteRenderer.color = plantDefault;
+    }
 }
