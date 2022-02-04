@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
-{
+{   
     [SerializeField]float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement; 
     public Animator animator;
 
-    // Update is called once per frame
+    // add max health
+    public float currentHealth = 20f;
+    public PhysHealthBar physHealthBar;
+
     void Update()
-    {
+    {   
+        // StartCoroutine(decreaseHealth());
+        
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
@@ -23,5 +28,15 @@ public class Player : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+    // IEnumerator decreaseHealth()
+    // {
+    //     while (currentHealth > 0)
+    //     {
+    //         currentHealth -= 0.5f;
+    //         physHealthBar.SetHealth(currentHealth);
+    //         yield return new WaitForSeconds(1);
+    //     }
+    // }
 
 }

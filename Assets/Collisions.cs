@@ -33,28 +33,18 @@ public class Collisions : MonoBehaviour
             {
                 Debug.Log("I'm watering Plant!");
                 StartCoroutine(waterPlant());
-                // increase emotional health bar
+                // increase health bar
             }
         }
     }
 
     IEnumerator waterPlant () 
     {
-        // learn how to write a for loop in C# for this
-        targetSpriteRenderer.color = beingWatered;
-        yield return new WaitForSeconds(.15f);
-        targetSpriteRenderer.color = plantDefault;
-        yield return new WaitForSeconds(.15f);
-        targetSpriteRenderer.color = beingWatered;
-        yield return new WaitForSeconds(.15f);
-        targetSpriteRenderer.color = plantDefault;
-        yield return new WaitForSeconds(.15f);
-        targetSpriteRenderer.color = beingWatered;
-        yield return new WaitForSeconds(.15f);
-        targetSpriteRenderer.color = plantDefault;
-        yield return new WaitForSeconds(.15f);
-        targetSpriteRenderer.color = beingWatered;
-        yield return new WaitForSeconds(.15f);
-        targetSpriteRenderer.color = plantDefault;
+        for (int i = 0; i < 5; i++) {
+            targetSpriteRenderer.color = beingWatered;
+            yield return new WaitForSeconds(.13f);
+            targetSpriteRenderer.color = plantDefault;
+            yield return new WaitForSeconds(.13f);
+        }
     }
 }
