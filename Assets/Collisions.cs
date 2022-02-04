@@ -33,7 +33,6 @@ public class Collisions : MonoBehaviour
             {
                 Debug.Log("I'm watering Plant!");
                 StartCoroutine(waterPlant());
-                // increase health bar
             }
         }
     }

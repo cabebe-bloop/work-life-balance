@@ -9,13 +9,17 @@ public class Player : MonoBehaviour
     Vector2 movement; 
     public Animator animator;
 
-    // add max health
-    public float currentHealth = 20f;
+    public float maxHealth = 50f;
+    public float currentHealth;
     public PhysHealthBar physHealthBar;
+
+    void Start() {
+        currentHealth = maxHealth;
+        physHealthBar.SetMaxHealth(maxHealth);
+    }
 
     void Update()
     {   
-        // StartCoroutine(decreaseHealth());
         
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
@@ -26,17 +30,20 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
+        StartCoroutine(DecreaseHealth());
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    // IEnumerator decreaseHealth()
-    // {
-    //     while (currentHealth > 0)
-    //     {
-    //         currentHealth -= 0.5f;
-    //         physHealthBar.SetHealth(currentHealth);
-    //         yield return new WaitForSeconds(1);
-    //     }
-    // }
+    IEnumerator DecreaseHealth()
+    {
+        while (currentHealth > 0)
+        {
+            Debug.Log("START:" + Time.time);
+            currentHealth -= 0.005f;
+            physHealthBar.SetHealth(currentHealth);
+            yield return new WaitForSeconds(5);
+            Debug.Log("STOP:" + Time.time);
+        }
+    }
 
 }
