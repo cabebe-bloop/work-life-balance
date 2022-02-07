@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     // waits the 3 seconds.
     IEnumerator DecreaseHealth()
     {
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSeconds(1);
         while (currentHealth > 0)
         {
             // Debug.Log("START:" + Time.time);
