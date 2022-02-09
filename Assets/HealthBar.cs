@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PhysHealthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
     public Slider slider;
 

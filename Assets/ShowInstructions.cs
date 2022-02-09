@@ -6,13 +6,8 @@ using TMPro;
 
 public class ShowInstructions : MonoBehaviour
 {
+        public TMP_Text UIInstructionText;
 
-    // public GameObject UIInstructionText;
-    public TMP_Text UIInstructionText;
-
-    // public TextMeshPro 
-
-    // public TextMes
     void Start()
     {
         // UIInstructionText.SetActive(false);
@@ -45,8 +40,4 @@ public class ShowInstructions : MonoBehaviour
         }
     }
 
-    // void Update()
-    // {
-        
-    // }
 }

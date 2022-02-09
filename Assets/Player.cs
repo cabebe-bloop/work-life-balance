@@ -10,14 +10,22 @@ public class Player : MonoBehaviour
     public Animator animator;
 
     public float maxHealth = 50f;
-    public float currentHealth;
-    public PhysHealthBar physHealthBar;
+    public float currentPhysHealth;
+    public float currentEmoHealth;
+
+
+    public HealthBar physHealthBar;
+
+    public HealthBar emoHealthBar;
 
     public Interactions interaction;
 
     void Start() {
-        currentHealth = maxHealth;
+        // physHealthBar.SetMaxHealth(maxHealth);
+        currentPhysHealth = maxHealth;
+        currentEmoHealth = maxHealth;
         physHealthBar.SetMaxHealth(maxHealth);
+        emoHealthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -29,13 +37,16 @@ public class Player : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.magnitude);
 
-        StartCoroutine(DecreaseHealth());
+        StartCoroutine(DecreasePhysHealth());
+        StartCoroutine(DecreaseEmoHealth());
+        // StartCoroutine(DecreaseHealth(physHealthBar, currentPhysHealth));
+        // StartCoroutine(DecreaseHealth(emoHealthBar, currentEmoHealth));
 
         if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
         {    
             // seems to be running multiple times (maybe for the entire duration the condition is true?)
             // how can I say "only run this once"
-            AddPhysHealth(3);
+            AddEmoHealth(5);
         }
 
         if (interaction.isNapping && Input.GetKeyDown("space"))
@@ -51,27 +62,43 @@ public class Player : MonoBehaviour
     // Figure out the while loop condition and why it runs the coroutine so often
     // Find a solution (maybe check Unity order of execution?) to place DecreaseHealth in an area where the while loop actually
     // waits the 3 seconds.
-    IEnumerator DecreaseHealth()
+    IEnumerator DecreasePhysHealth()
     {
-        yield return new WaitForSeconds(1);
-        while (currentHealth > 0)
+        // yield return new WaitForSeconds(1);
+        while (currentPhysHealth > 0)
         { 
-            if (interaction.plantBeingWatered) 
-            {
-                yield return null;
-            }
+            // if (interaction.plantBeingWatered) 
+            // {
+            //     yield return null;
+            // }
             // Debug.Log("START:" + Time.time);
             yield return new WaitForSeconds(3);
-            currentHealth -= 0.01f;
-            physHealthBar.SetHealth(currentHealth);
+            currentPhysHealth -= 0.01f;
+            physHealthBar.SetHealth(currentPhysHealth);
             // Debug.Log("STOP:" + Time.time);
+        }
+    }
+    IEnumerator DecreaseEmoHealth()
+    {
+        // yield return new WaitForSeconds(1);
+        while (currentEmoHealth > 0)
+        { 
+            yield return new WaitForSeconds(3);
+            currentEmoHealth -= 0.01f;
+            emoHealthBar.SetHealth(currentEmoHealth);
         }
     }
 
     public void AddPhysHealth (float health) 
     {
-        currentHealth += health;
-        physHealthBar.SetHealth(currentHealth);
+        currentPhysHealth += health;
+        physHealthBar.SetHealth(currentPhysHealth);
+    }
+    
+    public void AddEmoHealth (float health) 
+    {
+        currentEmoHealth += health;
+        emoHealthBar.SetHealth(currentEmoHealth);
     }
 
 }
