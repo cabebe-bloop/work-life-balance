@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
             // how can I say "only run this once"
             AddPhysHealth(3);
         }
+
+        if (interaction.isNapping && Input.GetKeyDown("space"))
+        {
+            AddPhysHealth(5);
+        }
     }
     void FixedUpdate()
     {
@@ -51,10 +56,10 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1);
         while (currentHealth > 0)
         { 
-        // if (interaction.plantBeingWatered) 
-        //     {
-        //         yield return new WaitForSeconds(5);
-        //     }
+            if (interaction.plantBeingWatered) 
+            {
+                yield return null;
+            }
             // Debug.Log("START:" + Time.time);
             yield return new WaitForSeconds(3);
             currentHealth -= 0.01f;

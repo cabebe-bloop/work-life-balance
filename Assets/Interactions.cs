@@ -15,6 +15,7 @@ public class Interactions : MonoBehaviour
     public GameObject target;
 
     public bool plantBeingWatered = false;
+    public bool isNapping = false;
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -50,9 +51,9 @@ public class Interactions : MonoBehaviour
 
     public void Nap() 
     {
-        // Trigger made available when player is near couch 
         // turn off player sprite renderer + disable movement buttons 
         // When space is pressed, make animation of sprite show up on couch for 3 seconds
+        StartCoroutine(napTime());
         Debug.Log("Zzzzzzz");
     }
     public void waterPlant() 
@@ -70,5 +71,12 @@ public class Interactions : MonoBehaviour
             yield return new WaitForSeconds(.13f);
             plantBeingWatered = false;
         }
+    }
+
+    IEnumerator napTime ()
+    {
+        isNapping = true;
+        yield return new WaitForSeconds(2);
+        isNapping = false;
     }
 }
