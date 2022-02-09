@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Collisions : MonoBehaviour
+public class Interactions : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer targetSpriteRenderer;
+
+    // public GameObject InstructionText;
 
     [SerializeField] Color32 beingWatered = new Color32 (1, 1, 1, 1);
     [SerializeField] Color32 plantDefault = new Color32 (1, 1, 1, 1);
@@ -15,10 +18,12 @@ public class Collisions : MonoBehaviour
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        // instructionsText = GetComponent<Text>();
     }
     void OnTriggerEnter2D(Collider2D other) {
         target = other.gameObject;
         targetSpriteRenderer = other.GetComponent<SpriteRenderer>();
+        // instructionsText.enabled = !instructionsText.enabled;
     }
 
     void OnTriggerExit2D(Collider2D other) {
@@ -28,7 +33,6 @@ public class Collisions : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {   if (!target)
             {
-                // spriteRenderer.color = beingWatered;
                 return;
             }
 
@@ -36,9 +40,21 @@ public class Collisions : MonoBehaviour
             {
                 waterPlant();
             }
+
+            if (target.tag == "Nap Spot")
+            {
+                Nap();
+            }
         }
     }
 
+    public void Nap() 
+    {
+        // Trigger made available when player is near couch 
+        // turn off player sprite renderer + disable movement buttons 
+        // When space is pressed, make animation of sprite show up on couch for 3 seconds
+        Debug.Log("Zzzzzzz");
+    }
     public void waterPlant() 
     {
         Debug.Log("I'm watering Plant!");

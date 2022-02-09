@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public float currentHealth;
     public PhysHealthBar physHealthBar;
 
-    public Collisions interaction;
+    public Interactions interaction;
 
     void Start() {
         currentHealth = maxHealth;
@@ -50,7 +50,11 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         while (currentHealth > 0)
-        {
+        { 
+        // if (interaction.plantBeingWatered) 
+        //     {
+        //         yield return new WaitForSeconds(5);
+        //     }
             // Debug.Log("START:" + Time.time);
             yield return new WaitForSeconds(3);
             currentHealth -= 0.01f;
