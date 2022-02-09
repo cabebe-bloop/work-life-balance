@@ -10,19 +10,29 @@ public class ShowInstructions : MonoBehaviour
     // public GameObject UIInstructionText;
     public TMP_Text UIInstructionText;
 
+    // public TextMeshPro 
+
     // public TextMes
     void Start()
     {
         // UIInstructionText.SetActive(false);
         UIInstructionText.enabled = false;
+
+
     }
 
     public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
+    { if (other.gameObject.tag == "Player")
         {
             // UIInstructionText.SetActive(true);
             UIInstructionText.enabled = true;
+            if (gameObject.tag == "Plant")
+            {
+                UIInstructionText.SetText("Press 'space' to water");
+            } else if (gameObject.tag == "Nap Spot")
+            {
+                UIInstructionText.SetText("Press 'space' to nap");
+            }
         }
     }
 
