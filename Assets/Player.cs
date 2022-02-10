@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 
     public Interactions interaction;
 
+    public bool recentAction = false;
+
 
     void Start() {
         // physHealthBar.SetMaxHealth(maxHealth);
@@ -39,22 +41,35 @@ public class Player : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.magnitude);
 
-        StartCoroutine(DecreasePhysHealth());
-        StartCoroutine(DecreaseEmoHealth());
-        // StartCoroutine(DecreaseHealth(physHealthBar, currentPhysHealth));
-        // StartCoroutine(DecreaseHealth(emoHealthBar, currentEmoHealth));
+        // StartCoroutine(DecreasePhysHealth());
+        // StartCoroutine(DecreaseEmoHealth());
+        DecreaseEmoHealth();
 
         if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
         {    
             // seems to be running multiple times (maybe for the entire duration the condition is true?)
             // how can I say "only run this once"
-            AddEmoHealth(5);
+            if (recentAction)
+            {
+                return;
+            } else if (!recentAction)
+            {
+                recentAction = true;
+                AddEmoHealth(5);
+            }
         }
 
         if (interaction.isNapping && Input.GetKeyDown("space"))
         {
-            AddPhysHealth(5);
-            animator.SetBool("Asleep", true);
+            if (recentAction)
+            {
+                return;
+            } else if (!recentAction)
+            {
+                recentAction = true;
+                AddPhysHealth(5);
+                animator.SetBool("Asleep", true);
+            }
             // return null; 
         }
     }
@@ -66,33 +81,53 @@ public class Player : MonoBehaviour
     // Figure out the while loop condition and why it runs the coroutine so often
     // Find a solution (maybe check Unity order of execution?) to place DecreaseHealth in an area where the while loop actually
     // waits the 3 seconds.
-    IEnumerator DecreasePhysHealth()
+    // IEnumerator DecreasePhysHealth()
+    // {
+    //     while (currentPhysHealth > 0)
+    //     { 
+    //         yield return new WaitForSeconds(3);
+    //         currentPhysHealth -= 0.01f;
+    //         physHealthBar.SetHealth(currentPhysHealth);
+    //     }
+    // }
+    // IEnumerator DecreaseEmoHealth()
+    // {
+    //     // yield return new WaitForSeconds(1);
+    //     while (currentEmoHealth > 0)
+    //     { 
+    //         yield return new WaitForSeconds(3);
+    //         currentEmoHealth -= 0.01f;
+    //         emoHealthBar.SetHealth(currentEmoHealth);
+    //     }
+    // }
+
+    public void DecreaseEmoHealth ()
     {
-        // yield return new WaitForSeconds(1);
-        while (currentPhysHealth > 0)
-        { 
-            // if (interaction.plantBeingWatered) 
-            // {
-            //     yield return null;
-            // }
-            // Debug.Log("START:" + Time.time);
-            yield return new WaitForSeconds(3);
-            currentPhysHealth -= 0.01f;
-            physHealthBar.SetHealth(currentPhysHealth);
-            // Debug.Log("STOP:" + Time.time);
-        }
-    }
-    IEnumerator DecreaseEmoHealth()
-    {
-        // yield return new WaitForSeconds(1);
-        while (currentEmoHealth > 0)
-        { 
-            yield return new WaitForSeconds(3);
-            currentEmoHealth -= 0.01f;
+        if (currentEmoHealth > 0) 
+        {
+            if (interaction.plantBeingWatered) {
+                StartCoroutine(Wait(2));
+            } else
+            {
+            StartCoroutine(Wait(1));
+            currentEmoHealth -= 0.05f;
             emoHealthBar.SetHealth(currentEmoHealth);
-        }
+            }
+        } 
     }
 
+// public void DecreasePhysHealth ()
+// {
+//     if (currentPhysHealth > 0)
+//     {
+//         if ()
+//     }
+// }
+
+    IEnumerator Wait (float seconds) 
+    {
+        yield return new WaitForSeconds(seconds);
+    }
     public void AddPhysHealth (float health) 
     {
         currentPhysHealth += health;

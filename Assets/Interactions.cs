@@ -71,8 +71,8 @@ public class Interactions : MonoBehaviour
             yield return new WaitForSeconds(.13f);
             targetSpriteRenderer.color = plantDefault;
             yield return new WaitForSeconds(.13f);
-            plantBeingWatered = false;
         }
+        plantBeingWatered = false;
     }
 
     IEnumerator napTime ()
