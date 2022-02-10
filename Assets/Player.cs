@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// using UnityEngine.
 
 public class Player : MonoBehaviour
 {   
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     public HealthBar emoHealthBar;
 
     public Interactions interaction;
+
 
     void Start() {
         // physHealthBar.SetMaxHealth(maxHealth);

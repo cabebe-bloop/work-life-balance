@@ -12,8 +12,14 @@ public class ShowInstructions : MonoBehaviour
     {
         // UIInstructionText.SetActive(false);
         UIInstructionText.enabled = false;
+    }
 
-
+    void Update()
+    {
+        if (Input.GetKeyDown("space") && UIInstructionText.enabled)
+        {
+            UIInstructionText.enabled = false;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
