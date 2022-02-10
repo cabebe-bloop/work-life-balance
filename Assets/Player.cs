@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
         if (interaction.isNapping && Input.GetKeyDown("space"))
         {
             AddPhysHealth(5);
+            animator.SetBool("Asleep", true);
         }
     }
     void FixedUpdate()

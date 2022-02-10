@@ -8,6 +8,8 @@ public class Interactions : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer targetSpriteRenderer;
 
+    public Animator playerAnimator;
+
     // public GameObject InstructionText;
 
     [SerializeField] Color32 beingWatered = new Color32 (1, 1, 1, 1);
@@ -78,5 +80,6 @@ public class Interactions : MonoBehaviour
         isNapping = true;
         yield return new WaitForSeconds(2);
         isNapping = false;
+        playerAnimator.SetBool("Asleep", false);
     }
 }
