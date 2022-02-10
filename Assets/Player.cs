@@ -32,8 +32,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {   
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
+        movement.x = (interaction.isNapping) ? 0 : Input.GetAxis("Horizontal");
+        movement.y = (interaction.isNapping) ? 0: Input.GetAxis("Vertical");
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
         {
             AddPhysHealth(5);
             animator.SetBool("Asleep", true);
+            // return null; 
         }
     }
     void FixedUpdate()
