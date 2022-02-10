@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Interactions : MonoBehaviour
 {
+    public Player player;
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer targetSpriteRenderer;
 
@@ -73,6 +74,7 @@ public class Interactions : MonoBehaviour
             yield return new WaitForSeconds(.13f);
         }
         plantBeingWatered = false;
+        player.recentAction = false;
     }
 
     IEnumerator napTime ()
