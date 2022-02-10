@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// using UnityEngine.
 
 public class Player : MonoBehaviour
 {   
@@ -44,6 +43,7 @@ public class Player : MonoBehaviour
         // StartCoroutine(DecreasePhysHealth());
         // StartCoroutine(DecreaseEmoHealth());
         DecreaseEmoHealth();
+        DecreasePhysHealth();
 
         if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
         {    
@@ -105,24 +105,33 @@ public class Player : MonoBehaviour
     {
         if (currentEmoHealth > 0) 
         {
-            if (interaction.plantBeingWatered) {
+            if (interaction.plantBeingWatered)
+            {
                 StartCoroutine(Wait(2));
             } else
             {
-            StartCoroutine(Wait(1));
-            currentEmoHealth -= 0.05f;
-            emoHealthBar.SetHealth(currentEmoHealth);
+                StartCoroutine(Wait(2));
+                currentEmoHealth -= 0.02f;
+                emoHealthBar.SetHealth(currentEmoHealth);
             }
         } 
     }
 
-// public void DecreasePhysHealth ()
-// {
-//     if (currentPhysHealth > 0)
-//     {
-//         if ()
-//     }
-// }
+public void DecreasePhysHealth ()
+{
+    if (currentPhysHealth > 0)
+    {
+        if (interaction.isNapping)
+        {
+            StartCoroutine(Wait(2));
+        } else
+        {
+            StartCoroutine(Wait(2));
+            currentPhysHealth -= 0.02f;
+            physHealthBar.SetHealth(currentPhysHealth);
+        }
+    }
+}
 
     IEnumerator Wait (float seconds) 
     {

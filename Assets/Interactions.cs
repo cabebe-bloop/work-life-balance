@@ -81,7 +81,8 @@ public class Interactions : MonoBehaviour
     {
         isNapping = true;
         yield return new WaitForSeconds(2);
-        isNapping = false;
         playerAnimator.SetBool("Asleep", false);
+        isNapping = false;
+        player.recentAction = false;
     }
 }
