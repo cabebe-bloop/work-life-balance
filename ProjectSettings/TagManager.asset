@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Plant
   - Nap Spot
+  - Food
   layers:
   - Default
   - TransparentFX

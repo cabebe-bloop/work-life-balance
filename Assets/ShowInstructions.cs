@@ -33,6 +33,9 @@ public class ShowInstructions : MonoBehaviour
             } else if (gameObject.tag == "Nap Spot")
             {
                 UIInstructionText.SetText("Press 'space' to nap");
+            } else if (gameObject.tag == "Food")
+            {
+                UIInstructionText.SetText("Press 'space' to eat");
             }
         }
     }

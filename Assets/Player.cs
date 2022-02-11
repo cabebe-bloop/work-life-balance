@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {   
+    Vector2 movement; 
     [SerializeField]float moveSpeed = 5f;
     public Rigidbody2D rb;
-    Vector2 movement; 
     public Animator animator;
-
     public float maxHealth = 50f;
     public float currentPhysHealth;
     public float currentEmoHealth;
-
-
     public HealthBar physHealthBar;
-
     public HealthBar emoHealthBar;
-
     public Interactions interaction;
-
-    public bool recentAction = false;
-
+    public bool recentEmoAction = false;
+    public bool recentPhysAction = false;
 
     void Start() {
         // physHealthBar.SetMaxHealth(maxHealth);
@@ -31,6 +25,7 @@ public class Player : MonoBehaviour
         emoHealthBar.SetMaxHealth(maxHealth);
     }
 
+    // new solution
     void Update()
     {   
         movement.x = (interaction.isNapping) ? 0 : Input.GetAxis("Horizontal");
@@ -49,30 +44,35 @@ public class Player : MonoBehaviour
         {    
             // seems to be running multiple times (maybe for the entire duration the condition is true?)
             // how can I say "only run this once"
-            if (recentAction)
+            if (recentEmoAction)
             {
                 return;
-            } else if (!recentAction)
+            } else if (!recentEmoAction)
             {
-                recentAction = true;
+                recentEmoAction = true;
                 AddEmoHealth(5);
             }
         }
 
         if (interaction.isNapping && Input.GetKeyDown("space"))
         {
-            if (recentAction)
+            if (recentPhysAction)
             {
                 return;
-            } else if (!recentAction)
+            } else if (!recentPhysAction)
             {
-                recentAction = true;
-                AddPhysHealth(5);
+                recentPhysAction = true;
+                AddPhysHealth(10);
                 animator.SetBool("Asleep", true);
             }
-            // return null; 
+        }
+
+        if (interaction.isEating && Input.GetKeyDown("space"))
+        {
+            AddPhysHealth(5);
         }
     }
+
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
             } else
             {
                 StartCoroutine(Wait(2));
-                currentEmoHealth -= 0.02f;
+                currentEmoHealth -= 0.03f;
                 emoHealthBar.SetHealth(currentEmoHealth);
             }
         } 
@@ -123,11 +123,11 @@ public void DecreasePhysHealth ()
     {
         if (interaction.isNapping)
         {
-            StartCoroutine(Wait(2));
+            StartCoroutine(Wait(5));
         } else
         {
             StartCoroutine(Wait(2));
-            currentPhysHealth -= 0.02f;
+            currentPhysHealth -= 0.03f;
             physHealthBar.SetHealth(currentPhysHealth);
         }
     }

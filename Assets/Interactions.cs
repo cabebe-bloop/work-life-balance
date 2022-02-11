@@ -19,6 +19,7 @@ public class Interactions : MonoBehaviour
 
     public bool plantBeingWatered = false;
     public bool isNapping = false;
+    public bool isEating = false;
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -39,16 +40,19 @@ public class Interactions : MonoBehaviour
             {
                 return;
             }
-
             if (target.tag == "Plant") 
             {
-                waterPlant();
+                WaterPlant();
             }
-
             if (target.tag == "Nap Spot")
             {
                 Nap();
             }
+            if (target.tag == "Food")
+            {
+                Eat();
+            }
+            
         }
     }
 
@@ -56,15 +60,45 @@ public class Interactions : MonoBehaviour
     {
         // turn off player sprite renderer + disable movement buttons 
         // When space is pressed, make animation of sprite show up on couch for 3 seconds
-        StartCoroutine(napTime());
+        StartCoroutine(NapTime());
         Debug.Log("Zzzzzzz");
     }
-    public void waterPlant() 
+    public void WaterPlant() 
     {
         Debug.Log("I'm watering Plant!");
-        StartCoroutine(plantColorFlash());
+        StartCoroutine(PlantColorFlash());
     }
-    IEnumerator plantColorFlash () 
+
+    public void Eat()
+    {
+        Debug.Log("Yum!");
+        StartCoroutine(FoodGetsEaten());
+    }
+
+    IEnumerator FoodGetsEaten()
+    {
+        isEating = true;
+        // byte i = 225;
+        for (byte i = 255; i > 20; i -= 45)
+        {
+            if (i < 20)
+            {
+                break;
+            }
+            targetSpriteRenderer.color = new Color32 (255, 255, 255, i);
+            yield return new WaitForSeconds(.13f);
+        }
+        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 170);
+        // yield return new WaitForSeconds(.13f);
+        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 120);
+        // yield return new WaitForSeconds(.13f);
+        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 80);
+        // yield return new WaitForSeconds(.13f);
+        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 20);
+        // yield return new WaitForSeconds(.13f);
+        isEating = false;
+    }
+    IEnumerator PlantColorFlash () 
     {
         plantBeingWatered = true;
         for (int i = 0; i < 5; i++) {
@@ -74,15 +108,15 @@ public class Interactions : MonoBehaviour
             yield return new WaitForSeconds(.13f);
         }
         plantBeingWatered = false;
-        player.recentAction = false;
+        player.recentEmoAction = false;
     }
 
-    IEnumerator napTime ()
+    IEnumerator NapTime ()
     {
         isNapping = true;
         yield return new WaitForSeconds(2);
         playerAnimator.SetBool("Asleep", false);
         isNapping = false;
-        player.recentAction = false;
+        player.recentPhysAction = false;
     }
 }
