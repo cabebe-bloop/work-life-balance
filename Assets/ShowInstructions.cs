@@ -10,7 +10,6 @@ public class ShowInstructions : MonoBehaviour
 
     void Start()
     {
-        // UIInstructionText.SetActive(false);
         UIInstructionText.enabled = false;
     }
 

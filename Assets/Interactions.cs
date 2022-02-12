@@ -88,14 +88,6 @@ public class Interactions : MonoBehaviour
             targetSpriteRenderer.color = new Color32 (255, 255, 255, i);
             yield return new WaitForSeconds(.13f);
         }
-        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 170);
-        // yield return new WaitForSeconds(.13f);
-        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 120);
-        // yield return new WaitForSeconds(.13f);
-        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 80);
-        // yield return new WaitForSeconds(.13f);
-        // targetSpriteRenderer.color = new Color32 (255, 255, 255, 20);
-        // yield return new WaitForSeconds(.13f);
         isEating = false;
     }
     IEnumerator PlantColorFlash () 
