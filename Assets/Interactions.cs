@@ -23,12 +23,10 @@ public class Interactions : MonoBehaviour
 
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // instructionsText = GetComponent<Text>();
     }
     void OnTriggerEnter2D(Collider2D other) {
         target = other.gameObject;
         targetSpriteRenderer = other.GetComponent<SpriteRenderer>();
-        // instructionsText.enabled = !instructionsText.enabled;
     }
 
     void OnTriggerExit2D(Collider2D other) {
@@ -99,6 +97,7 @@ public class Interactions : MonoBehaviour
             targetSpriteRenderer.color = plantDefault;
             yield return new WaitForSeconds(.13f);
         }
+        targetSpriteRenderer.color = plantDefault;
         plantBeingWatered = false;
         player.recentEmoAction = false;
     }

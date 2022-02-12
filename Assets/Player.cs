@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         physHealthBar.SetMaxHealth(maxHealth);
         emoHealthBar.SetMaxHealth(maxHealth);
     }
-    
+
     void Update()
     {   
         movement.x = (interaction.isNapping) ? 0 : Input.GetAxis("Horizontal");
