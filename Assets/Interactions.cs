@@ -41,6 +41,7 @@ public class Interactions : MonoBehaviour
             if (target.tag == "Plant") 
             {
                 WaterPlant();
+                return;
             }
             if (target.tag == "Nap Spot")
             {
@@ -75,18 +76,22 @@ public class Interactions : MonoBehaviour
 
     IEnumerator FoodGetsEaten()
     {
-        isEating = true;
-        // byte i = 225;
-        for (byte i = 255; i > 20; i -= 45)
+        if (target.tag == "Food")
         {
-            if (i < 20)
-            {
-                break;
-            }
-            targetSpriteRenderer.color = new Color32 (255, 255, 255, i);
-            yield return new WaitForSeconds(.13f);
+            isEating = true;
+            Destroy(target);
+            yield return new WaitForSeconds(.5f);
+            // byte i = 225;
+            // for (byte i = 255; i > 20; i -= 45)
+            // { if (i < 20)
+            //     {
+            //         break;
+            //     }
+            //     targetSpriteRenderer.color = new Color32 (255, 255, 255, i);
+            //     yield return new WaitForSeconds(.13f);
+            // }
+            isEating = false;
         }
-        isEating = false;
     }
     IEnumerator PlantColorFlash () 
     {

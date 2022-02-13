@@ -17,12 +17,23 @@ public class Player : MonoBehaviour
     public bool recentEmoAction = false;
     public bool recentPhysAction = false;
 
+    public Plant currentPlant;
+
     void Start() {
         currentPhysHealth = maxHealth;
         currentEmoHealth = maxHealth;
         physHealthBar.SetMaxHealth(maxHealth);
         emoHealthBar.SetMaxHealth(maxHealth);
     }
+
+    // public void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.tag == "Plant")
+    //     {
+    //         GameObject thisPlant = other.gameObject;
+    //         currentPlant = thisPlant;
+    //     }
+    // }
 
     void Update()
     {   
@@ -94,12 +105,12 @@ public class Player : MonoBehaviour
     {
         if (currentPhysHealth > 0)
         {
-            if (interaction.isNapping)
+            if (interaction.isNapping || interaction.isEating)
             {
                 StartCoroutine(Wait(5));
             } else
             {
-                StartCoroutine(Wait(2));
+                StartCoroutine(Wait(10));
                 currentPhysHealth -= 0.03f;
                 physHealthBar.SetHealth(currentPhysHealth);
             }
