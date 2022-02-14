@@ -21,19 +21,21 @@ public class Interactions : MonoBehaviour
     public bool isNapping = false;
     public bool isEating = false;
 
+    // public script
+
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void OnTriggerEnter2D(Collider2D other) {
         target = other.gameObject;
-        targetSpriteRenderer = other.GetComponent<SpriteRenderer>();
+        targetSpriteRenderer = other.GetComponent<SpriteRenderer>();   
     }
 
     void OnTriggerExit2D(Collider2D other) {
         target = null;
     }
     void Update() {           
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && !player.gameOver)
         {   if (!target)
             {
                 return;
@@ -60,6 +62,7 @@ public class Interactions : MonoBehaviour
         // turn off player sprite renderer + disable movement buttons 
         // When space is pressed, make animation of sprite show up on couch for 3 seconds
         StartCoroutine(NapTime());
+        playerAnimator.SetBool("Asleep", true);
         Debug.Log("Zzzzzzz");
     }
     public void WaterPlant() 
@@ -95,6 +98,10 @@ public class Interactions : MonoBehaviour
     }
     IEnumerator PlantColorFlash () 
     {
+        if (!target)
+        {
+            yield return null;
+        }
         plantBeingWatered = true;
         for (int i = 0; i < 5; i++) {
             targetSpriteRenderer.color = beingWatered;

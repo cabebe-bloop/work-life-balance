@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {   
@@ -17,28 +19,35 @@ public class Player : MonoBehaviour
     public bool recentEmoAction = false;
     public bool recentPhysAction = false;
 
+    public TMP_Text instructions;
+
     public Plant currentPlant;
+    public bool gameOver = false;
+
+    public GameObject gameOverScreen;
 
     void Start() {
         currentPhysHealth = maxHealth;
         currentEmoHealth = maxHealth;
         physHealthBar.SetMaxHealth(maxHealth);
         emoHealthBar.SetMaxHealth(maxHealth);
+        gameOver = false;
+        gameOverScreen.SetActive(false);
+        // add dead bool as false? 
     }
 
     // public void OnTriggerEnter2D(Collider2D other)
     // {
     //     if (other.tag == "Plant")
     //     {
-    //         GameObject thisPlant = other.gameObject;
-    //         currentPlant = thisPlant;
+    //         GameObject thisPlant = other.GetComponent<Plant>();
     //     }
     // }
 
     void Update()
     {   
-        movement.x = (interaction.isNapping) ? 0 : Input.GetAxis("Horizontal");
-        movement.y = (interaction.isNapping) ? 0: Input.GetAxis("Vertical");
+        movement.x = (interaction.isNapping || gameOver) ? 0 : Input.GetAxis("Horizontal");
+        movement.y = (interaction.isNapping || gameOver) ? 0: Input.GetAxis("Vertical");
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -47,36 +56,42 @@ public class Player : MonoBehaviour
         DecreaseEmoHealth();
         DecreasePhysHealth();
 
-        if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
-        {    
-            // seems to be running multiple times (maybe for the entire duration the condition is true?)
-            // how can I say "only run this once"
-            if (recentEmoAction)
-            {
-                return;
-            } else if (!recentEmoAction)
-            {
-                recentEmoAction = true;
-                AddEmoHealth(5);
-            }
-        }
+        EndGame();
 
-        if (interaction.isNapping && Input.GetKeyDown("space"))
+        if (!gameOver)
         {
-            if (recentPhysAction)
-            {
-                return;
-            } else if (!recentPhysAction)
-            {
-                recentPhysAction = true;
-                AddPhysHealth(10);
-                animator.SetBool("Asleep", true);
+            if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
+            {    
+                // seems to be running multiple times (maybe for the entire duration the condition is true?)
+                // how can I say "only run this once"
+                if (recentEmoAction)
+                {
+                    return;
+                } else if (!recentEmoAction)
+                {
+                    recentEmoAction = true;
+                    AddEmoHealth(5);
+                }
             }
-        }
 
-        if (interaction.isEating && Input.GetKeyDown("space"))
-        {
-            AddPhysHealth(5);
+            if (interaction.isNapping && Input.GetKeyDown("space"))
+            {
+                if (recentPhysAction)
+                {
+                    // animator.SetBool("Asleep", true);
+                    return;
+                } else if (!recentPhysAction)
+                {
+                    recentPhysAction = true;
+                    AddPhysHealth(10);
+                    // animator.SetBool("Asleep", true);
+                }
+            }
+
+            if (interaction.isEating && Input.GetKeyDown("space"))
+            {
+                AddPhysHealth(5);
+            }
         }
     }
 
@@ -89,6 +104,10 @@ public class Player : MonoBehaviour
     {
         if (currentEmoHealth > 0) 
         {
+            if (gameOver)
+            {
+                return;
+            }
             if (interaction.plantBeingWatered)
             {
                 StartCoroutine(Wait(2));
@@ -105,12 +124,16 @@ public class Player : MonoBehaviour
     {
         if (currentPhysHealth > 0)
         {
+            if (gameOver)
+            {
+                return;
+            }
             if (interaction.isNapping || interaction.isEating)
             {
                 StartCoroutine(Wait(5));
             } else
             {
-                StartCoroutine(Wait(10));
+                StartCoroutine(Wait(100));
                 currentPhysHealth -= 0.03f;
                 physHealthBar.SetHealth(currentPhysHealth);
             }
@@ -131,6 +154,19 @@ public class Player : MonoBehaviour
     {
         currentEmoHealth += health;
         emoHealthBar.SetHealth(currentEmoHealth);
+    }
+
+    public void EndGame ()
+    {
+        if (currentPhysHealth <= 0 || currentEmoHealth <= 0)
+        {
+            // Debug.Log("Game over!");
+            animator.SetBool("Asleep", false);
+            animator.SetBool("Dead", true);
+            instructions.enabled = false;
+            gameOver = true;
+            gameOverScreen.SetActive(true);
+        }
     }
 
 }

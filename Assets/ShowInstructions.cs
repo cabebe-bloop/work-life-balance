@@ -8,6 +8,9 @@ public class ShowInstructions : MonoBehaviour
 {
         public TMP_Text UIInstructionText;
 
+        // public GameObject gameOver;
+        // public Player player;
+
     void Start()
     {
         UIInstructionText.enabled = false;
@@ -19,6 +22,16 @@ public class ShowInstructions : MonoBehaviour
         {
             UIInstructionText.enabled = false;
         }
+
+        // if (player.gameOver)
+        // {
+        //     UIInstructionText.enabled = false;
+        // }
+
+        // if (gameOver)
+        // {
+        //     UIInstructionText.enabled = false;
+        // }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -36,6 +49,9 @@ public class ShowInstructions : MonoBehaviour
             {
                 UIInstructionText.SetText("Press 'space' to eat");
             }
+        } else if (!other.gameObject)
+        {
+            return;
         }
     }
 
