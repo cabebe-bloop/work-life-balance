@@ -59,6 +59,9 @@ public class Interactions : MonoBehaviour
     {
         // turn off player sprite renderer + disable movement buttons 
         // When space is pressed, make animation of sprite show up on couch for 3 seconds
+        
+        player.AddPhysHealth(10);
+        isNapping = true;
         StartCoroutine(NapTime());
         playerAnimator.SetBool("Asleep", true);
         Debug.Log("Zzzzzzz");
@@ -73,15 +76,16 @@ public class Interactions : MonoBehaviour
 
     public void Eat()
     {
-        Debug.Log("Yum!");
+        player.AddPhysHealth(5);
+        isEating = true;
         StartCoroutine(FoodGetsEaten());
+        Debug.Log("Yum!");
     }
 
     IEnumerator FoodGetsEaten()
     {
         if (target.tag == "Food")
         {
-            isEating = true;
             Destroy(target);
             yield return new WaitForSeconds(.5f);
             // byte i = 225;
@@ -115,7 +119,6 @@ public class Interactions : MonoBehaviour
 
     IEnumerator NapTime ()
     {
-        isNapping = true;
         yield return new WaitForSeconds(2);
         playerAnimator.SetBool("Asleep", false);
         isNapping = false;

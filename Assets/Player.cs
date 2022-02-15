@@ -32,7 +32,8 @@ public class Player : MonoBehaviour
         physHealthBar.SetMaxHealth(maxHealth);
         emoHealthBar.SetMaxHealth(maxHealth);
 
-        InvokeRepeating("DecreaseEmoHealth", 2, 0.05f);
+        InvokeRepeating("DecreaseEmoHealth", 2, 0.03f);
+        InvokeRepeating("DecreasePhysHealth", 2, 0.03f);
 
         gameOver = false;
         gameOverScreen.SetActive(false);
@@ -61,40 +62,40 @@ public class Player : MonoBehaviour
 
         EndGame();
 
-        if (!gameOver)
-        {
-            // if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
-            // {    
-            //     // if (recentEmoAction)
-            //     // {
-            //     //     return;
-            //     // } else if (!recentEmoAction)
-            //     // {
-            //         // recentEmoAction = true;
-            //     // interaction.WaterPlant();
-            //     // AddEmoHealth(5);
-            //     // }
-            // }
+        // if (!gameOver)
+        // {
+        //     // if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
+        //     // {    
+        //     //     // if (recentEmoAction)
+        //     //     // {
+        //     //     //     return;
+        //     //     // } else if (!recentEmoAction)
+        //     //     // {
+        //     //         // recentEmoAction = true;
+        //     //     // interaction.WaterPlant();
+        //     //     // AddEmoHealth(5);
+        //     //     // }
+        //     // }
 
-            if (interaction.isNapping && Input.GetKeyDown("space"))
-            {
-                // if (recentPhysAction)
-                // {
-                //     // animator.SetBool("Asleep", true);
-                //     return;
-                // } else if (!recentPhysAction)
-                // {
-                    // recentPhysAction = true;
-                AddPhysHealth(10);
-                    // animator.SetBool("Asleep", true);
-                // }
-            }
+        //     // if (interaction.isNapping && Input.GetKeyDown("space"))
+        //     // {
+        //     //     // if (recentPhysAction)
+        //     //     // {
+        //     //     //     // animator.SetBool("Asleep", true);
+        //     //     //     return;
+        //     //     // } else if (!recentPhysAction)
+        //     //     // {
+        //     //         // recentPhysAction = true;
+        //     //     // AddPhysHealth(10);
+        //     //         // animator.SetBool("Asleep", true);
+        //     //     // }
+        //     // }
 
-            if (interaction.isEating && Input.GetKeyDown("space"))
-            {
-                AddPhysHealth(5);
-            }
-        }
+        //     // if (interaction.isEating && Input.GetKeyDown("space"))
+        //     // {
+        //     //     AddPhysHealth(5);
+        //     // }
+        // }
     }
 
     void FixedUpdate()
@@ -129,7 +130,7 @@ public class Player : MonoBehaviour
 
     public void DecreasePhysHealth ()
     {
-        if (currentPhysHealth > 0)
+        if (currentPhysHealth > 0 && currentPhysHealth < 51)
         {
             if (gameOver)
             {
@@ -141,10 +142,13 @@ public class Player : MonoBehaviour
                 return;
             } else
             {
-                StartCoroutine(Wait(100));
-                currentPhysHealth -= 0.03f;
+                // StartCoroutine(Wait(100));
+                currentPhysHealth -= 0.1f;
                 physHealthBar.SetHealth(currentPhysHealth);
             }
+        } if (currentPhysHealth > 50)
+        {
+            currentPhysHealth = 50;
         }
     }
 
