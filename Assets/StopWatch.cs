@@ -8,7 +8,7 @@ public class StopWatch : MonoBehaviour
 {
     [SerializeField] float currentTime;
     public TMP_Text currentTimeText;
-    // public TMP_text GameOverTime;
+    [SerializeField] TMP_Text gameOverTime;
     [SerializeField] bool stopWatchRunning = false;
     
     void Start()
@@ -35,5 +35,7 @@ public class StopWatch : MonoBehaviour
     {
         stopWatchRunning = false;
         currentTimeText.enabled = false;
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        gameOverTime.text = time.ToString(@"mm\:ss\:f");
     }
 }
