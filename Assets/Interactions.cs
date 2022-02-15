@@ -53,6 +53,10 @@ public class Interactions : MonoBehaviour
             {
                 Eat();
             }
+            if (target.tag == "Egg")
+            {
+                EatEgg();
+            }
             
         }
     }
@@ -80,26 +84,25 @@ public class Interactions : MonoBehaviour
     {
         player.AddPhysHealth(5);
         isEating = true;
+        StartCoroutine(FoodGetsEaten());
+        Debug.Log("FOOD");
+    }
+
+    public void EatEgg()
+    {
+        player.AddPhysHealth(5);
+        isEating = true;
         spawner.eggThere = false;
         StartCoroutine(FoodGetsEaten());
-        Debug.Log("Yum!");
+        Debug.Log("EGG");
     }
 
     IEnumerator FoodGetsEaten()
     {
-        if (target.tag == "Food")
+        if (target.tag == "Food" || target.tag == "Egg")
         {
             Destroy(target);
             yield return new WaitForSeconds(.5f);
-            // byte i = 225;
-            // for (byte i = 255; i > 20; i -= 45)
-            // { if (i < 20)
-            //     {
-            //         break;
-            //     }
-            //     targetSpriteRenderer.color = new Color32 (255, 255, 255, i);
-            //     yield return new WaitForSeconds(.13f);
-            // }
             isEating = false;
         }
     }
