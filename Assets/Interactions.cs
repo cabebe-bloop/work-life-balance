@@ -21,6 +21,8 @@ public class Interactions : MonoBehaviour
     public bool isNapping = false;
     public bool isEating = false;
 
+    public Spawner spawner;
+
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -78,6 +80,7 @@ public class Interactions : MonoBehaviour
     {
         player.AddPhysHealth(5);
         isEating = true;
+        spawner.eggThere = false;
         StartCoroutine(FoodGetsEaten());
         Debug.Log("Yum!");
     }
