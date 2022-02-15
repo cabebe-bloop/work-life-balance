@@ -21,8 +21,6 @@ public class Interactions : MonoBehaviour
     public bool isNapping = false;
     public bool isEating = false;
 
-    // public script
-
     void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -66,9 +64,11 @@ public class Interactions : MonoBehaviour
         Debug.Log("Zzzzzzz");
     }
     public void WaterPlant() 
-    {
-        Debug.Log("I'm watering Plant!");
+    {   
+        player.AddEmoHealth(5);
+        plantBeingWatered = true;
         StartCoroutine(PlantColorFlash());
+        Debug.Log("I'm watering Plant!");
     }
 
     public void Eat()
@@ -98,11 +98,10 @@ public class Interactions : MonoBehaviour
     }
     IEnumerator PlantColorFlash () 
     {
-        if (!target)
-        {
-            yield return null;
-        }
-        plantBeingWatered = true;
+        // if (!target)
+        // {
+        //     yield return null;
+        // }
         for (int i = 0; i < 5; i++) {
             targetSpriteRenderer.color = beingWatered;
             yield return new WaitForSeconds(.13f);
@@ -111,7 +110,7 @@ public class Interactions : MonoBehaviour
         }
         targetSpriteRenderer.color = plantDefault;
         plantBeingWatered = false;
-        player.recentEmoAction = false;
+        // player.recentEmoAction = false;
     }
 
     IEnumerator NapTime ()
@@ -120,6 +119,6 @@ public class Interactions : MonoBehaviour
         yield return new WaitForSeconds(2);
         playerAnimator.SetBool("Asleep", false);
         isNapping = false;
-        player.recentPhysAction = false;
+        // player.recentPhysAction = false;
     }
 }

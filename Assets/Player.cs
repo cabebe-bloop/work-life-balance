@@ -16,12 +16,12 @@ public class Player : MonoBehaviour
     public HealthBar physHealthBar;
     public HealthBar emoHealthBar;
     public Interactions interaction;
-    public bool recentEmoAction = false;
-    public bool recentPhysAction = false;
+    // public bool recentEmoAction = false;
+    // public bool recentPhysAction = false;
 
     public TMP_Text instructions;
 
-    public Plant currentPlant;
+    // public Plant currentPlant;
     public bool gameOver = false;
 
     public GameObject gameOverScreen;
@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
         currentEmoHealth = maxHealth;
         physHealthBar.SetMaxHealth(maxHealth);
         emoHealthBar.SetMaxHealth(maxHealth);
+
+        InvokeRepeating("DecreaseEmoHealth", 2, 0.05f);
+
         gameOver = false;
         gameOverScreen.SetActive(false);
         // add dead bool as false? 
@@ -53,39 +56,38 @@ public class Player : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.magnitude);
 
-        DecreaseEmoHealth();
-        DecreasePhysHealth();
+        // DecreaseEmoHealth();
+        // DecreasePhysHealth();
 
         EndGame();
 
         if (!gameOver)
         {
-            if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
-            {    
-                // seems to be running multiple times (maybe for the entire duration the condition is true?)
-                // how can I say "only run this once"
-                if (recentEmoAction)
-                {
-                    return;
-                } else if (!recentEmoAction)
-                {
-                    recentEmoAction = true;
-                    AddEmoHealth(5);
-                }
-            }
+            // if (interaction.plantBeingWatered && Input.GetKeyDown("space"))
+            // {    
+            //     // if (recentEmoAction)
+            //     // {
+            //     //     return;
+            //     // } else if (!recentEmoAction)
+            //     // {
+            //         // recentEmoAction = true;
+            //     // interaction.WaterPlant();
+            //     // AddEmoHealth(5);
+            //     // }
+            // }
 
             if (interaction.isNapping && Input.GetKeyDown("space"))
             {
-                if (recentPhysAction)
-                {
+                // if (recentPhysAction)
+                // {
+                //     // animator.SetBool("Asleep", true);
+                //     return;
+                // } else if (!recentPhysAction)
+                // {
+                    // recentPhysAction = true;
+                AddPhysHealth(10);
                     // animator.SetBool("Asleep", true);
-                    return;
-                } else if (!recentPhysAction)
-                {
-                    recentPhysAction = true;
-                    AddPhysHealth(10);
-                    // animator.SetBool("Asleep", true);
-                }
+                // }
             }
 
             if (interaction.isEating && Input.GetKeyDown("space"))
@@ -102,7 +104,7 @@ public class Player : MonoBehaviour
 
     public void DecreaseEmoHealth ()
     {
-        if (currentEmoHealth > 0) 
+        if (currentEmoHealth > 0 && currentEmoHealth < 51) 
         {
             if (gameOver)
             {
@@ -110,14 +112,19 @@ public class Player : MonoBehaviour
             }
             if (interaction.plantBeingWatered)
             {
-                StartCoroutine(Wait(2));
-            } else
+                // StartCoroutine(Wait(5));
+                return;
+            } 
+            else
             {
-                StartCoroutine(Wait(2));
-                currentEmoHealth -= 0.03f;
+                // StartCoroutine(Wait(2));
+                currentEmoHealth -= 0.1f;
                 emoHealthBar.SetHealth(currentEmoHealth);
             }
-        } 
+        } if (currentEmoHealth > 50)
+        {
+            currentEmoHealth = 50;
+        }
     }
 
     public void DecreasePhysHealth ()
@@ -130,7 +137,8 @@ public class Player : MonoBehaviour
             }
             if (interaction.isNapping || interaction.isEating)
             {
-                StartCoroutine(Wait(5));
+                // StartCoroutine(Wait(5));
+                return;
             } else
             {
                 StartCoroutine(Wait(100));
@@ -152,6 +160,7 @@ public class Player : MonoBehaviour
     
     public void AddEmoHealth (float health) 
     {
+        Debug.Log("adding emo health!");
         currentEmoHealth += health;
         emoHealthBar.SetHealth(currentEmoHealth);
     }
