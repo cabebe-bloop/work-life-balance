@@ -26,11 +26,15 @@ public class Player : MonoBehaviour
 
     public GameObject gameOverScreen;
 
+    public StopWatch stopWatch;
+
     void Start() {
         currentPhysHealth = maxHealth;
         currentEmoHealth = maxHealth;
         physHealthBar.SetMaxHealth(maxHealth);
         emoHealthBar.SetMaxHealth(maxHealth);
+
+        stopWatch.StartStopWatch();
 
         InvokeRepeating("DecreaseEmoHealth", 2, 0.03f);
         InvokeRepeating("DecreasePhysHealth", 2, 0.03f);
@@ -177,6 +181,7 @@ public class Player : MonoBehaviour
             animator.SetBool("Asleep", false);
             animator.SetBool("Dead", true);
             instructions.enabled = false;
+            stopWatch.StopStopWatch();
             gameOver = true;
             gameOverScreen.SetActive(true);
         }
