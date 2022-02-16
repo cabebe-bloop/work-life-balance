@@ -21,7 +21,11 @@ public class ShowInstructions : MonoBehaviour
         if (Input.GetKeyDown("space") && UIInstructionText.enabled)
         {
             UIInstructionText.enabled = false;
-        }
+        } 
+        // else if (Input.GetKeyDown("space") && !UIInstructionText.enabled)
+        // {
+        //     return;
+        // }
 
         // if (player.gameOver)
         // {
