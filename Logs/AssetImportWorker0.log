@@ -439,3 +439,440 @@ Received Import Request.
 Start importing Assets/Prefabs/Eggs.prefab using Guid(e06b910212ac845b4b777cca6048f502) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'db79c818a5a2676d25ac08fb46200ae6') in 0.327722375 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
 
+========================================================================
+Received Import Request.
+  Time since last request: 160.026037 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/8BitNinjas.wav
+  artifactKey: Guid(c83b804552f5e4deeb1d8118dadd7579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/8BitNinjas.wav using Guid(c83b804552f5e4deeb1d8118dadd7579) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '051c68eff27f43d4891f3af7f4de6d73') in 0.311045 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/OfGodsAndPhilosophers.wav
+  artifactKey: Guid(3ae6e03c962bd4391a7acebf039583f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/OfGodsAndPhilosophers.wav using Guid(3ae6e03c962bd4391a7acebf039583f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e3fa30d614cee9a1d9f1c5a1ed87837') in 0.527513041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/InALandFarFarAway.wav
+  artifactKey: Guid(5febda2db58c84a4c830ac8cf62896cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/InALandFarFarAway.wav using Guid(5febda2db58c84a4c830ac8cf62896cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '73460a7446b3f004cefb160ed0a6a2cf') in 0.478568416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/PyramidsPyramids.wav
+  artifactKey: Guid(bc8b597659d0d4c129652fc222c2324c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/PyramidsPyramids.wav using Guid(bc8b597659d0d4c129652fc222c2324c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6cb3eb8eab4b4b2f6062bf951d0f6de8') in 0.433300333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/WakingTheDemons.wav
+  artifactKey: Guid(847b59bc0c490456a95f9c5a9c59b14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/WakingTheDemons.wav using Guid(847b59bc0c490456a95f9c5a9c59b14b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e380a137cf0dd464d5c40df2e7a31a36') in 0.43016875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/TheSpaceIsFullOf$tars.wav
+  artifactKey: Guid(c0ba79ddfcb0f4ee2987f8fc65db873b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/TheSpaceIsFullOf$tars.wav using Guid(c0ba79ddfcb0f4ee2987f8fc65db873b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '861be62c3272fb7adbed8e7892378404') in 0.254446334 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/TrialOfSpikes.wav
+  artifactKey: Guid(1406af93e9de44b879499bb06a2a0579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/TrialOfSpikes.wav using Guid(1406af93e9de44b879499bb06a2a0579) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0afb50aa61adca9306d5476a74454ab5') in 0.20033425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Cyberleaf Music - The 8-bit Jukebox Lite/TheSourceOfMana.wav
+  artifactKey: Guid(472f7cd21e51649568ef6dd402c9a538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cyberleaf Music - The 8-bit Jukebox Lite/TheSourceOfMana.wav using Guid(472f7cd21e51649568ef6dd402c9a538) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b1001bdf5d92e49e0cca95440c163ec') in 0.473423042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 672.215941 seconds.
+  path: Assets/Audio/ArcadeJam.wav
+  artifactKey: Guid(bc91338dd68d541de92e6c857cef3550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/ArcadeJam.wav using Guid(bc91338dd68d541de92e6c857cef3550) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b83055be46d320364ef451fbcebd2ace') in 0.711676333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.766984 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Atsuhisa Isomura - Game Over Jingles Pack - 05 Continue-.wav
+  artifactKey: Guid(c6200a6aa5cbd0e4eaeeaa64732566d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Atsuhisa Isomura - Game Over Jingles Pack - 05 Continue-.wav using Guid(c6200a6aa5cbd0e4eaeeaa64732566d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eceaa5c318eda6ab59ecb2aaaf95a5d1') in 0.101924792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Clement Panchout - Game Over Jingles Pack - 41 GameOverJingle Sunday.wav
+  artifactKey: Guid(d471abe91854c2f40923fc506b9b8f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Clement Panchout - Game Over Jingles Pack - 41 GameOverJingle Sunday.wav using Guid(d471abe91854c2f40923fc506b9b8f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e147e761494130b9157cf38c99ac5a19') in 0.079765916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 58 filthy homicide.wav
+  artifactKey: Guid(14d02eea39529bc409cb047e3f1ed683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 58 filthy homicide.wav using Guid(14d02eea39529bc409cb047e3f1ed683) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aef7ce0ec91f42551ac2cc174d70257c') in 0.075323125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Atsuhisa Isomura - Game Over Jingles Pack - 11 Oops!.wav
+  artifactKey: Guid(d3973f3ff7da53444af395717e2c7d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Atsuhisa Isomura - Game Over Jingles Pack - 11 Oops!.wav using Guid(d3973f3ff7da53444af395717e2c7d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '878b5d24d55cdffb916bbb0050bf8afe') in 0.100250084 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 21 Game Over - The L.wav
+  artifactKey: Guid(24dcf8614800c5644a2921234a23dfb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 21 Game Over - The L.wav using Guid(24dcf8614800c5644a2921234a23dfb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7cf6de1d14e97f982e1044f135a35d07') in 0.030155791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 17 Game Over - Dawn of Night.wav
+  artifactKey: Guid(ea68fca34633a26499530ddfc019dd34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 17 Game Over - Dawn of Night.wav using Guid(ea68fca34633a26499530ddfc019dd34) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2461b549196964fc47ddc472152eaed3') in 0.033079458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 29 Game Over.wav
+  artifactKey: Guid(af3977a16ffdcf945acc56e5bc232534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 29 Game Over.wav using Guid(af3977a16ffdcf945acc56e5bc232534) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87eaa8b486d4f2675137fd4a00bc49c3') in 0.039620125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 53 Not So Super After All, It Seems.wav
+  artifactKey: Guid(793c039ed7479ec4da52c4035b189b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 53 Not So Super After All, It Seems.wav using Guid(793c039ed7479ec4da52c4035b189b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f3f35585b33fe5cd893287e40e96503c') in 0.009111625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 55 Nobody's Favorite.wav
+  artifactKey: Guid(7cf62a7e94c3d9f4b8dce1b2c95d9c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 55 Nobody's Favorite.wav using Guid(7cf62a7e94c3d9f4b8dce1b2c95d9c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '73d31786810feda7c5506fe95a2c2eb1') in 0.032787792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 67 Koji Kondo's bad day at the office.wav
+  artifactKey: Guid(2d54533e258f51448a5feb3be89268cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 67 Koji Kondo's bad day at the office.wav using Guid(2d54533e258f51448a5feb3be89268cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4939c31bce913cf0c912105640a96087') in 0.030962958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 61 -Finale Calamity- Cathartic ANIMOSITY.wav
+  artifactKey: Guid(124bd573655bc9c42b8ed24c662b18b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 61 -Finale Calamity- Cathartic ANIMOSITY.wav using Guid(124bd573655bc9c42b8ed24c662b18b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '92b4f36f32bba536179199feb4401fb1') in 0.047154667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 32 Press the Button.wav
+  artifactKey: Guid(577846366c71077499a0090b10764229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 32 Press the Button.wav using Guid(577846366c71077499a0090b10764229) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b38dc4ba22580016eba5b018aae08e8f') in 0.064607625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 30 Jingle 4.wav
+  artifactKey: Guid(cf9263392cd83634fbe463db411d01ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 30 Jingle 4.wav using Guid(cf9263392cd83634fbe463db411d01ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e1c0a7d0c02fec5d5510b6809de4c3e') in 0.011433166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 01 Game Over - Repeating Dream.wav
+  artifactKey: Guid(804eb2a07cc0c724d8b43054924583d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 01 Game Over - Repeating Dream.wav using Guid(804eb2a07cc0c724d8b43054924583d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cffa0f87e2bf3a5f36759a1bdf0829d7') in 0.015714917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 38 Second Armageddon.wav
+  artifactKey: Guid(70c24b1cdf2786443aaf7fe5af0fc9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Solomon Allen - Game Over Jingles Pack - 38 Second Armageddon.wav using Guid(70c24b1cdf2786443aaf7fe5af0fc9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f385a60b830e7e42e450e1e2f4a9b042') in 0.00845275 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 57 Sega Deth.wav
+  artifactKey: Guid(8d91bae1cbd7a074eb75b9527aa95d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 57 Sega Deth.wav using Guid(8d91bae1cbd7a074eb75b9527aa95d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '59374c2e0a0b3bafce62fec4c6f693b5') in 0.131993709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Clement Panchout - Game Over Jingles Pack - 31 GameOverJingle Thursday.wav
+  artifactKey: Guid(8fbbda056a0a6b94ea7b08a939052704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Clement Panchout - Game Over Jingles Pack - 31 GameOverJingle Thursday.wav using Guid(8fbbda056a0a6b94ea7b08a939052704) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '07f9a0109512c151daf81b93cbac1b9a') in 0.029631375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 15 Jingle 1.wav
+  artifactKey: Guid(e55c964b65b96714183e2259c37778d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 15 Jingle 1.wav using Guid(e55c964b65b96714183e2259c37778d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc5b22058bbe7463e30488d3eeceec03') in 0.024011458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 56 Sad Strings.wav
+  artifactKey: Guid(8eae7dfac372d8948a95554eae6c7645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 56 Sad Strings.wav using Guid(8eae7dfac372d8948a95554eae6c7645) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee7e84342729685dc4d7e1a48c0afd0c') in 0.127519791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 12 Game Over - The Countdown.wav
+  artifactKey: Guid(78cee582299eef245b11e904f5aae41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Devlin Bataric - Game Over Jingles Pack - 12 Game Over - The Countdown.wav using Guid(78cee582299eef245b11e904f5aae41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8784f91ceaa507b0fe33144d333474a0') in 0.064482125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 27 My Nose Was Itchy.wav
+  artifactKey: Guid(83a3d26e14ee53540a782bb6b7ca1ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 27 My Nose Was Itchy.wav using Guid(83a3d26e14ee53540a782bb6b7ca1ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '55ba8ff38752075777a152b824490066') in 0.017838292 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Salvatore Maccarrone - Game Over Jingles Pack - 63 GameOverJingle Devices 2.wav
+  artifactKey: Guid(aae0c2b18e689ef49aef90c57446511d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Salvatore Maccarrone - Game Over Jingles Pack - 63 GameOverJingle Devices 2.wav using Guid(aae0c2b18e689ef49aef90c57446511d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ad260889b06ba6b80ded2a8d8707af2e') in 0.065759083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 59 Delicate Piano.wav
+  artifactKey: Guid(77ed02093e74fac42a18f2b5c7cf4574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 59 Delicate Piano.wav using Guid(77ed02093e74fac42a18f2b5c7cf4574) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00944c37b7a3c43fcb5a76e9edf01e6b') in 0.102028125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 07 I wasn't Paying Attention.wav
+  artifactKey: Guid(09a60cdc99727444c96e5b020023dcdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Pixel Guy - Game Over Jingles Pack - 07 I wasn't Paying Attention.wav using Guid(09a60cdc99727444c96e5b020023dcdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '48dc5e6b205b679f973e7eeb30cadd26') in 0.017032667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 44 Jingle 6.wav
+  artifactKey: Guid(8c7bbf1834eafbe4da8d8c9d4d910133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 44 Jingle 6.wav using Guid(8c7bbf1834eafbe4da8d8c9d4d910133) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6597639c375d77a1cdb03a11b0db7e70') in 0.037248041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Clement Panchout - Game Over Jingles Pack - 42 GameOverJingle Wednesday.wav
+  artifactKey: Guid(2442e18c8f5c8134da375337aaef466e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Clement Panchout - Game Over Jingles Pack - 42 GameOverJingle Wednesday.wav using Guid(2442e18c8f5c8134da375337aaef466e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ff38de22dfa5fee096bd5158999d5d3') in 0.151056708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 54 Sci-Fi Death.wav
+  artifactKey: Guid(d73d2ef0064969f48955cec7cb7196ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Casey Frantum - Game Over Jingles Pack - 54 Sci-Fi Death.wav using Guid(d73d2ef0064969f48955cec7cb7196ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '70743139a54c5d5ddc39c82b14fad79e') in 0.144516042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Eugene Golobokin - Game Over Jingles Pack - 09 Game Over Theme 6 noise ambient.wav
+  artifactKey: Guid(f9c1127ef8213094bb1de38ec0f9cef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Eugene Golobokin - Game Over Jingles Pack - 09 Game Over Theme 6 noise ambient.wav using Guid(f9c1127ef8213094bb1de38ec0f9cef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a68ebddab314d4efd30cc876cc4f5860') in 0.069709959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Eugene Golobokin - Game Over Jingles Pack - 24 Game Over Theme 3 space heartbeat.wav
+  artifactKey: Guid(633657ede85aa674582448b410bb50e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Eugene Golobokin - Game Over Jingles Pack - 24 Game Over Theme 3 space heartbeat.wav using Guid(633657ede85aa674582448b410bb50e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '702c61205016b14a1c0f2034540d2534') in 0.069181709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Eugene Golobokin - Game Over Jingles Pack - 19 Game Over Theme 1 synth glitchy.wav
+  artifactKey: Guid(373202ad1c26edf49a7517e7b8ff2d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Eugene Golobokin - Game Over Jingles Pack - 19 Game Over Theme 1 synth glitchy.wav using Guid(373202ad1c26edf49a7517e7b8ff2d58) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b2d6f916455db518a10742186c353a64') in 0.061600833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Sprites/health_bar_border.png
+  artifactKey: Guid(2f280fea36acf4b32bc881fd707aab1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/health_bar_border.png using Guid(2f280fea36acf4b32bc881fd707aab1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8a1db59895cafb18bded54c3c62f0ad1') in 0.032353625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Sprites/icons.png
+  artifactKey: Guid(31ce52270a5394fa7a1775df241e1dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/icons.png using Guid(31ce52270a5394fa7a1775df241e1dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b43e02e4910ccc94bcbf7fc7215c4e48') in 0.0636315 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 54
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 39 Jingle 7 Perseverancetown.wav
+  artifactKey: Guid(4a6c3f8dd37364c439fe7c69780a1f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Tine Schenck - Game Over Jingles Pack - 39 Jingle 7 Perseverancetown.wav using Guid(4a6c3f8dd37364c439fe7c69780a1f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8706d5dfcb4d5baf98a4b4189154e4a7') in 0.234439209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/Heart.png
+  artifactKey: Guid(9d1e43b56748843fb81fa2e425934a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Heart.png using Guid(9d1e43b56748843fb81fa2e425934a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'af9527d94b8b2ae0d0638ddaa4641fae') in 0.003525208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/69 Game Over Jingles Pack (Free)/Paul Hayfield - Game Over Jingles Pack - 08 You Are Dead.wav
+  artifactKey: Guid(d7168a351882f0645822fd14f90dbca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/69 Game Over Jingles Pack (Free)/Paul Hayfield - Game Over Jingles Pack - 08 You Are Dead.wav using Guid(d7168a351882f0645822fd14f90dbca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a132d55de0b42a1255b9166abcd53767') in 0.173523208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 50.170309 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ffef8db185c6de969bfcb6bf691b27a6') in 0.469825417 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000909 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Unity SDF.asset
+  artifactKey: Guid(c9adb1f542a93ae489bacfeae21e8394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Unity SDF.asset using Guid(c9adb1f542a93ae489bacfeae21e8394) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '892c909a6191e552478f68fd5f81da91') in 0.027919125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.265359 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF.asset
+  artifactKey: Guid(125cb55b44b24c4393181402bc6200e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF.asset using Guid(125cb55b44b24c4393181402bc6200e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4f11d7576efe37372fbce359c79c81ad') in 0.092485667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.316748 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
+  artifactKey: Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset using Guid(dc36b3fdc14f47ebb36fd484a67e268a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4b168eb451047f0afbdc95070a57cc95') in 0.045596625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Thread 0x16bceb000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.409 seconds
+Refreshing native plugins compatible for Editor in 0.21 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.322 seconds
+Domain Reload Profiling: 734ms
+	BeginReloadAssembly (167ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (19ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (200ms)
+		LoadAssemblies (168ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (77ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (54ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (322ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (263ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (182ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2924 unused Assets / (1.4 MB). Loaded Objects now: 3519.
+Memory consumption went from 106.2 MB to 104.8 MB.
+Total: 4.606750 ms (FindLiveObjects: 0.153750 ms CreateObjectMapping: 0.054375 ms MarkObjects: 3.661709 ms  DeleteObjects: 0.736625 ms)
+
+Prepare: number of updated asset objects reloaded= 0
